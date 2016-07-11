@@ -92,7 +92,8 @@ Else
 		Set Cells = currentWorksheet.Cells
 		Set FoundCell = currentWorkSheet.Range("B:B").Find(result)
 		If Not FoundCell Is Nothing Then
-			MsgBox (result & " found in row: " & FoundCell.Row)
+			REM MsgBox (result & " found in row: " & FoundCell.Row)
+			WScript.Echo result & " found in row: " & FoundCell.Row
 			REM get the value that is in the next cell in same row
 			word = Cells(FoundCell.Row, FoundCell.Column + 1).Value
 			MsgBox (result & " IP Address value is: " & word )
